@@ -1,11 +1,10 @@
 const fs = require('fs');
-const path = './data.json'; // Путь к файлу данных
-
+const path = './data.json'; 
 function readData() {
   if (fs.existsSync(path)) {
     return JSON.parse(fs.readFileSync(path, 'utf8'));
   }
-  return {}; // Если файл не найден, возвращаем пустой объект
+  return {}; 
 }
 
 function writeData(data) {

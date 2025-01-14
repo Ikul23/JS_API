@@ -19,17 +19,17 @@ if (!data.classes) {
   writeData(data);
 }
 
-// Главная страница
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/Public/index.html');
 });
 
-// Получение расписания
+
 app.get('/api/classes', (req, res) => {
   res.json(data.classes);
 });
 
-// Запись на занятие
+
 app.post('/api/enroll', (req, res) => {
   const { classId } = req.body;
   const classItem = data.classes.find((c) => c.id === parseInt(classId));
@@ -43,7 +43,7 @@ app.post('/api/enroll', (req, res) => {
   res.status(400).json({ success: false, message: 'Место отсутствует.' });
 });
 
-// Отмена записи
+
 app.post('/api/cancel', (req, res) => {
   const { classId } = req.body;
   const classItem = data.classes.find((c) => c.id === parseInt(classId));
@@ -62,7 +62,7 @@ app.use((req, res) => {
   res.status(404).send('<h1>Страница не найдена!</h1>');
 });
 
-// Запуск сервера
+
 app.listen(PORT, () => {
   console.log(`Сервер запущен на http://localhost:${PORT}`);
 });
