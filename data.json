@@ -1,0 +1,25 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "Йога",
+      "time": "10:00 - 11:00",
+      "maxParticipants": 15,
+      "currentParticipants": 15
+    },
+    {
+      "id": 2,
+      "name": "Силовая тренировка",
+      "time": "11:30 - 12:30",
+      "maxParticipants": 20,
+      "currentParticipants": 20
+    },
+    {
+      "id": 3,
+      "name": "Зумба",
+      "time": "13:00 - 14:00",
+      "maxParticipants": 25,
+      "currentParticipants": 25
+    }
+  ]
+}
