@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
 
-      scheduleContainer.appendChild(card);
+      scheduleContainer.append(card);
     });
   }
 
