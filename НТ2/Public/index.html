@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bootstrap Slider</title>
+		<!-- Подключение Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+		<style>
+			.slider-container {
+				position: relative;
+				max-width: 800px;
+				margin: 50px auto;
+			}
+
+			.slider img {
+				width: 100%;
+				height: 400px;
+				object-fit: cover;
+			}
+
+			.indicators {
+				position: absolute;
+				bottom: 10px;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				gap: 10px;
+			}
+
+			.dot {
+				width: 12px;
+				height: 12px;
+				background-color: blue;
+				border-radius: 50%;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.dot.active {
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body class="bg-light">
+		<div class="slider-container">
+			<div id="slider" class="slider d-flex overflow-hidden">
+				<img src="https://via.placeholder.com/800x400?text=Image+1" alt="Image 1" />
+				<img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2" />
+				<img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3" />
+				<img src="https://via.placeholder.com/800x400?text=Image+4" alt="Image 4" />
+			</div>
+			<button id="prev" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y">❮</button>
+			<button id="next" class="btn btn-dark position-absolute top-50 end-0 translate-middle-y">❯</button>
+			<div class="indicators">
+				<span class="dot" data-index="0"></span>
+				<span class="dot" data-index="1"></span>
+				<span class="dot" data-index="2"></span>
+				<span class="dot" data-index="3"></span>
+			</div>
+		</div>
+
+		<!-- Подключение Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
